@@ -3,10 +3,19 @@ import Home from '../views/Home.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/',
-    name: 'Home',
+    path: '/currencies',
+    name: 'home',
     component: Home
   },
+  {
+    path: '/tasks',
+    name: 'tasks',
+    component: Home
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: '/currencies'
+  }
 ]
 
 const router = createRouter({

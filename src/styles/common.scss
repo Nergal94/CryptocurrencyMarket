@@ -1,0 +1,18 @@
+@import "constants";
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 44px;
+    width: 44px;
+    margin-right: 8px;
+  }
+
+  h1 {
+    font-size: 18px;
+    color: $accent-blue;
+    margin-bottom: 0px;
+  }
+}
