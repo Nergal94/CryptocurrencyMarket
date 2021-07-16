@@ -15,17 +15,16 @@
 </template>
 
 <script lang="ts">
-  import {Options, Vue} from "vue-class-component";
+  import { defineComponent } from 'vue';
   import DashboardIcon from '@/components/Common/Icon/Icons/DashboardIcon.vue'
   import TasksIcon from "@/components/Common/Icon/Icons/TasksIcon.vue";
 
 
-  @Options({
+  export default defineComponent({
     components: {
       DashboardIcon,
       TasksIcon
     },
-
     props: {
       iconName: {
         type: String,
@@ -43,21 +42,14 @@
         type: String,
         default: 'currentColor'
       }
+    },
+    computed: {
+      icon(): string {
+        return this.iconName;
+      }
     }
+
   })
-
-  export default class Icon extends Vue {
-
-    private iconName = '';
-    private width = 0;
-    private height = 0;
-    private iconColor = '';
-
-    get icon() {
-      return this.iconName;
-    }
-
-  }
 
 </script>
 

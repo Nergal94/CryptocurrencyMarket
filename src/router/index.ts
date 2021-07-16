@@ -1,16 +1,16 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Home from '../views/Home.vue'
+import Currencies from '../views/Currencies.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/currencies',
     name: 'home',
-    component: Home
+    component: Currencies
   },
   {
     path: '/tasks',
     name: 'tasks',
-    component: Home
+    component: Currencies
   },
   {
     path: '/:pathMatch(.*)*',

@@ -3,9 +3,9 @@
 </template>
 
 <script lang="ts">
-  import {Vue} from "vue-class-component";
+  import { defineComponent } from 'vue';
 
-  export default class TasksIcon extends Vue {
-    
-  }
+  export default defineComponent({
+    name: 'TasksIcon'
+  })
 </script>

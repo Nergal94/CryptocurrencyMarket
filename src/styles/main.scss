@@ -18,7 +18,7 @@ body {
   min-height: 100%;
 }
 
-.content {
+.v-main__wrap {
   width: 100%;
   min-height: 100vh;
   background: $main-background;
@@ -29,10 +29,14 @@ body {
 .content-wrapper {
   width: 100%;
   min-height: 100vh;
+  padding-left: 275px;
+}
+
+.v-container {
+  padding-top: 60px;
 }
 
 .wrapper {
-  padding: 6px 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,3 +44,4 @@ body {
 
   height: 2000px;
 }
+

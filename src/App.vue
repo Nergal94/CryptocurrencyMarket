@@ -3,18 +3,17 @@
 </template>
 
 <script lang="ts">
-  import {Options, Vue} from "vue-class-component";
+  import {defineComponent} from "vue";
   import MainLayout from "@/layouts/MainLayout.vue";
 
-  @Options({
-    components: {
-      MainLayout
+  export default defineComponent(
+    {
+      name: 'App',
+      components: {
+        MainLayout
+      }
     }
-  })
-
-  export default class App extends Vue{
-
-  }
+  )
 </script>
 
 <style lang="scss">

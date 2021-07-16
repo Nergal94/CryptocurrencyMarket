@@ -40,20 +40,16 @@
 </template>
 
 <script lang="ts">
-  import {Options, Vue} from 'vue-class-component';
-  import {MenuNavItem} from "@/models/MenuNavItem";
+  import { defineComponent } from 'vue';
   import {menuItems} from "@/constants/Menu";
 
+  export default defineComponent({
+    name: 'Menu',
+    data: () => ({
+      menuItems: menuItems
+    }),
 
-  @Options({})
-
-  export default class Menu extends Vue {
-    menuItems: MenuNavItem[] = menuItems;
-
-    getMenuItemIcon(item: MenuNavItem) {
-      return require(`@/assets/images/menu-icons/${ item.icon }`);
-    }
-  }
+  })
 </script>
 
 <style lang="scss">
