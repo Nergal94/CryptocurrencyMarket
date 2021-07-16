@@ -7,13 +7,16 @@
 <script lang="ts">
   import { defineComponent, reactive, onMounted } from 'vue';
   import {api} from "@/api";
+  import {apiResponse} from "@/compositions/ApiResponse";
 
   export default defineComponent({
     name: 'Currencies',
     setup() {
-      onMounted(() => {
-        api.currencies.getAllCurrencies()
-      });
-    }
+      const { response: currencies } = apiResponse(api.currencies.getAllCurrencies);
+
+      return {
+        currencies,
+      }
+    },
   });
 </script>

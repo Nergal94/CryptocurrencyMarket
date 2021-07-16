@@ -1,16 +1,11 @@
 <template>
-  <v-app>
-  <v-main class="content">
-    <Menu />
+  <main class="content">
+    <Menu/>
     <div class="content-wrapper">
       <Header :class="{ 'header--transparent' : isScroled}" />
-      <v-container fluid>
-        <router-view class="wrapper"/>
-      </v-container>
+      <router-view class="wrapper"></router-view>
     </div>
-  </v-main>
-  </v-app>
-
+  </main>
 </template>
 
 <script lang="ts">
