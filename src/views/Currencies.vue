@@ -20,7 +20,7 @@
       </template>
 
       <template v-slot:volume="row">
-        {{ $filters.money(row.data['1d'].volume) }}$
+        {{ row.data['1d'] && $filters.money(row.data['1d'].volume) }}$
       </template>
 
     </v-table>
@@ -36,10 +36,10 @@
   export default defineComponent({
     name: 'Currencies',
     data: () => ({
-      fields: CurrenciesFields
+      fields: CurrenciesFields,
     }),
     setup() {
-      const { response: currencies } = apiResponse(api.currencies.getAllCurrencies);
+      const { response: currencies } = apiResponse(api.currencies.getAllCurrencies, true, 5000);
 
       return {
         currencies,

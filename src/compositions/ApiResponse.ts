@@ -1,12 +1,26 @@
-import {reactive, onMounted} from 'vue';
+import {reactive, onMounted, onDeactivated} from 'vue';
 
-export const apiResponse = (apiMethod: any) => {
+export const apiResponse = (apiMethod: any, isNeedRefresh?: boolean, refreshInterval?: number) => {
   const response = reactive({
-    data: null
-  })
+    data: {},
+  });
+
+  let internal: any = null;
+
+  const getData = async () =>  {
+    response.data = await apiMethod();
+  }
 
   onMounted(async () => {
-    response.data = await apiMethod();
+    await getData();
+
+    if (isNeedRefresh) {
+      internal = setInterval(() => getData(), refreshInterval);
+    }
+  });
+
+  onDeactivated(() => {
+    clearInterval(internal);
   });
 
   return {
