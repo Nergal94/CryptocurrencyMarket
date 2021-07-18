@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Currencies from '../views/Currencies.vue'
+import Currencies from '../views/Currencies/Currencies.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {

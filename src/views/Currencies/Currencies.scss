@@ -1,0 +1,15 @@
+.currency {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  img {
+    height: 24px;
+    width: 24px;
+    margin-right: 4px;
+  }
+
+  strong {
+    line-height: 24px;
+  }
+}

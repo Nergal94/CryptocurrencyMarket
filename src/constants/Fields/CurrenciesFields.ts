@@ -13,6 +13,16 @@ export const CurrenciesFields: FieldsItem[] =  [
     sortable: true
   },
   {
+    value: 'dayChange',
+    label: '24h %',
+    sortable: true
+  },
+  {
+    value: 'weekChange',
+    label: '7d %',
+    sortable: true
+  },
+  {
     value: 'market_cap',
     label: 'Market Cap',
     sortable: true

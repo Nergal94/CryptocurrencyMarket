@@ -1,0 +1,11 @@
+@import "src/styles/constants";
+
+.price-change {
+  &--positive {
+    color: $green;
+  }
+
+  &--negative {
+    color: $red;
+  }
+}

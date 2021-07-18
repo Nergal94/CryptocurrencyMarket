@@ -1,0 +1,33 @@
+@import "src/styles/constants";
+
+.percent-change {
+  position: relative;
+
+  &:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: calc(50% - 2px);
+    left: -10px;
+  }
+  &--positive {
+    color: $green;
+    &::after {
+      border-style: solid;
+      border-width: 0px 4px 4px 4px;
+      border-color: transparent transparent $green transparent;
+    }
+
+  }
+
+  &--negative {
+     color: $red;
+
+    &::after {
+      border-style: solid;
+      border-width: 4px 4px 0 4px;
+      border-color: $red transparent transparent transparent;
+    }
+  }
+}
